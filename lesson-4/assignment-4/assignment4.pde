@@ -3,7 +3,6 @@
 * Author: Elohim Guevara Varela
 *
 * Assignment 4: Collage
-* 
 * Introduction to Programming For The Visual Arts with p5.js
 * from www.kadenze.com
 * The first version was in p5.js, but this is a Processing
@@ -20,9 +19,9 @@ PImage img;
 // Variable for font
 PFont font;
 // Colors for rect()
-int bermellon_100;
-int yellow_100;
-int blue_100;
+int bermellon100;
+int yellow100;
+int blue100;
 // Rect sizes
 float sizeX;
 float sizeY;
@@ -46,9 +45,9 @@ void setup() {
   textFont(font);
 
   // Colors with transparency of alpha 100
-  bermellon_100 = color(230, 46, 0, 100);
-  yellow_100 = color(255, 233, 0, 100);
-  blue_100 = color(0, 0, 255, 100);
+  bermellon100 = color(230, 46, 0, 100);
+  yellow100 = color(255, 233, 0, 100);
+  blue100 = color(0, 0, 255, 100);
 
   sizeX = random(45, 437);
   sizeY = random(50, 300);
@@ -57,39 +56,39 @@ void setup() {
   sizeX3 = random(20, 830);
   sizeY3 = random(18, 787);
 
-   x = random(5, 1200);
-   y = random(10, 400);
-   x2 = random(10, 1100);
-   y2 = random(15, 410);
-   x3 = random(20, 950);
-   y3 = random(5, 380);
+  x = random(5, 1200);
+  y = random(10, 400);
+  x2 = random(10, 1100);
+  y2 = random(15, 410);
+  x3 = random(20, 950);
+  y3 = random(5, 380);
 }
 
 void draw() {
   //noLoop();
   image(img, 0, 0, width, height);
   // Colors with transparency of alpha 90
-  int bermellon_90 = color(230, 46, 0, 90);
-  int yellow_90 = color(255, 233, 0, 90);
-  int blue_90 = color(0, 0, 255, 90);
+  int bermellon90 = color(230, 46, 0, 90);
+  int yellow90 = color(255, 233, 0, 90);
+  int blue90 = color(0, 0, 255, 90);
   
   strokeWeight(0);
   if (pmouseX < 455) {
-    fill(bermellon_90);
+    fill(bermellon90);
   }
   else if (pmouseX > 455 && pmouseX < 910) {
-    fill(yellow_90);
+    fill(yellow90);
   }
   else if (pmouseX > 910 && pmouseX < width + 1) {
-    fill(blue_90);
+    fill(blue90);
   }
   rect(0, 0, 1365, 569);
 
-  fill(bermellon_100);
+  fill(bermellon100);
   rect(x, y, sizeX, sizeY);
-  fill(yellow_100);
+  fill(yellow100);
   rect(x2, y2, sizeX2, sizeY2);
-  fill(blue_100);
+  fill(blue100);
   rect(x3, y3, sizeX3, sizeY3);
 
   fill(255);
@@ -101,12 +100,12 @@ void draw() {
 void mouseReleased() {
   if (sizeX == random(45, 437) && sizeY == random(50, 300) && sizeX2 == random(10, 500) && sizeY2 == random(15, 666)
      && sizeX3 == random(20, 830) && sizeY3 == random(18, 787)) {
-    sizeX = random(66, 400);
-    sizeY = random(35, 380);
-    sizeX2 = random(5, 550);
-    sizeY2 = random(10, 68);
-    sizeX3 = random(22, 850);
-    sizeY3 = random(16, 800);
+      sizeX = random(66, 400);
+      sizeY = random(35, 380);
+      sizeX2 = random(5, 550);
+      sizeY2 = random(10, 68);
+      sizeX3 = random(22, 850);
+      sizeY3 = random(16, 800);
   }
   else {
     sizeX = random(45, 437);
