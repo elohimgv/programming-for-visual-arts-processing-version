@@ -12,9 +12,9 @@
 */
 
 // Black
-int color_1 = 0;
+int color1 = 0;
 // White
-int color_2 = 255;
+int color2 = 255;
 // Variable to close eyes
 boolean closeEyes = true;
 
@@ -40,7 +40,7 @@ void draw() {
   /* LEFT EYE */
 
   // "Eyebrow"
-  fill(color_1);
+  fill(color1);
   beginShape();
   // Vertex 1
   vertex(485.77, 267.1);
@@ -51,8 +51,8 @@ void draw() {
   endShape();
 
   // "Retina"
-  fill(color_2);
-  stroke(color_1);
+  fill(color2);
+  stroke(color1);
   strokeWeight(2);
   beginShape();
   // Vertex 1
@@ -70,17 +70,17 @@ void draw() {
 
   // "Cornea"
   fill(234, G, B);
-  strokeWeight(color_1);
+  strokeWeight(color1);
   ellipse(437.69, 328.7, 33, 27.25);
 
   // "Iris"
-  fill(color_1);
-  strokeWeight(color_1);
+  fill(color1);
+  strokeWeight(color1);
   ellipse(437.82, 327.45, 12.8, 10);
 
   // "Lights"
-  fill(color_2);
-  strokeWeight(color_1);
+  fill(color2);
+  strokeWeight(color1);
   // Light 1 left
   ellipse(426.92, 326.58, 5.5, 6.3);
   // Light 2 right
@@ -88,8 +88,8 @@ void draw() {
 
   if (closeEyes == false) {
     // "Retina"
-    fill(color_1);
-    stroke(color_1);
+    fill(color1);
+    stroke(color1);
     strokeWeight(2);
     beginShape();
     // Vertex 1
@@ -104,7 +104,7 @@ void draw() {
   /* RIGHT EYE */
 
   // "Eyebrow"
-  fill(color_1);
+  fill(color1);
   beginShape();
   // Vertex 1
   vertex(616.18, 211.07);
@@ -121,8 +121,8 @@ void draw() {
   endShape();
 
   // "Retina"
-  fill(color_2);
-  stroke(color_1);
+  fill(color2);
+  stroke(color1);
   strokeWeight(2);
   beginShape();
   // Vertex 1
@@ -147,7 +147,7 @@ void draw() {
 
   // "Cornea"
   fill(234, G, B);
-  strokeWeight(color_1);
+  strokeWeight(color1);
   beginShape();
   // Vertex 1
   vertex(607.75, 279.84);
@@ -168,13 +168,13 @@ void draw() {
   endShape();
 
   // "Iris"
-  fill(color_1);
-  strokeWeight(color_1);
+  fill(color1);
+  strokeWeight(color1);
   ellipse(623.56, 282.84, 11.33, 10);
 
   // "Lights"
-  fill(color_2);
-  strokeWeight(color_1);
+  fill(color2);
+  strokeWeight(color1);
   // Light 1 left
   ellipse(616.1, 279.64, 4.5, 4.16);
   // Light 2 right
@@ -189,8 +189,8 @@ void draw() {
   bezier(625.24, 264.33, 654.15, 260, 658, 293.63, 658, 293.63);
 
   if (closeEyes == false) {
-    fill(color_1);
-    stroke(color_1);
+    fill(color1);
+    stroke(color1);
     strokeWeight(2);
     beginShape();
     // Vertex 1
