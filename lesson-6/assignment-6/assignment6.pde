@@ -1,10 +1,3 @@
-import ddf.minim.*;
-import ddf.minim.analysis.*;
-import ddf.minim.effects.*;
-import ddf.minim.signals.*;
-import ddf.minim.spi.*;
-import ddf.minim.ugens.*;
-
 /**
 *
 * Author: Elohim Guevara Varela
@@ -20,6 +13,13 @@ import ddf.minim.ugens.*;
 * Platform: https://www.kadenze.com/
 *
 */
+
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 
 Minim minim;
 AudioPlayer sound;
