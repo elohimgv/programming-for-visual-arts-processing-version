@@ -62,30 +62,43 @@ void draw() {
   fill(240, 70, 218, 130);
   rect(0, 0, 300, 400);
   // Conditions for change to state to state
-  if (state == 1) {
+  switch (state) {
+  case 1:
     drawLetter1();
-  } else if (state == 2) {
+    break;
+  case 2:
     drawLetter2();
-  } else if (state == 3) {
+    break;
+  case 3:
     drawLetter3();
-  } else if (state == 4) {
+    break;
+  case 4:
     drawLetter4();
-  } else if (state == 5) {
+    break;
+  case 5:
     drawLetter5(m);
-  } else if (state == 6) {
+    break;
+  case 6:
     drawLetter6();
-  } else if (state == 7) {
+    break;
+  case 7:
     drawLetter7();
-  } else if (state == 8) {
+    break;
+  case 8:
     drawLetter8();
-  } else if (state == 9) {
+    break;
+  case 9:
     drawLetter9();
-  } else if (state == 10) {
+    break;
+  case 10:
     drawLetter10(100, 20, 60, 82, 10);
-  } else if (state == 11) {
+    break;
+  case 11:
     drawLetter11();
-  } else if (state == 12) {
+    break;
+  case 12:
     drawLetter12();
+    break;
   }
 }
 
@@ -397,7 +410,7 @@ void drawLetter12() {
 }
 
 void keyTyped() {
-    // conditions... if letter q - s is pressed, active the corresponding state
+  // Conditions... if letter q - s is pressed, active the corresponding state
   if (key == 'q' || key == 'Q') {
     state = 1;
   } else if (key == 'w' || key == 'W') {
