@@ -4,10 +4,8 @@
 *
 * Assignment 3: Response, "Expressive Eyes"
 *
-* Introduction to Programming For The Visual Arts with p5.js
-* from www.kadenze.com
-* The first version was in p5.js, but this is a Processing
-* version. To learn more visit: processing.org
+* The first version was in p5.js, but this is a Processing 
+* version. To learn more about Processing visit: processing.org
 *
 */
 
