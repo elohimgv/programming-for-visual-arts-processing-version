@@ -3,14 +3,9 @@
 * Author: Elohim Guevara Varela
 *
 * Assignment 5: Synthesis A, Nonlinear Narrative
-* Introduction to Programming For The Visual Arts with p5.js
-* from www.kadenze.com
-* The first version was in p5.js, but this is a Processing
-* version. To learn more visit: processing.org
 *
-* MOOC: Introduction to Programming For The Visual Arts with p5.js
-*
-* Platform: https://www.kadenze.com/
+* The first version was in p5.js, but this is a Processing 
+* version. To learn more about Processing visit: processing.org
 *
 */
 
