@@ -1,6 +1,5 @@
-# Introduction to Programming for the Visual Arts with Processing
-This course is offer via [Kadenze](https://www.kadenze.com/courses/introduction-to-programming-for-the-visual-arts-with-p5-js/info) platform. 
+# Programming for the Visual Arts with Processing
 
-First, I did in [p5.js](https://p5js.org/), but now I come with a new version... 
+First, I did in [p5.js](https://github.com/elohimgv/programming-for-the-visual-arts), but now I come with a new version... 
 
 Enjoy it! :relaxed:
