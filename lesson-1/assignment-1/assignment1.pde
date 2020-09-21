@@ -11,7 +11,7 @@
 *
 */
 
-// Declare a image variable
+// Declare an image variable
 PImage img;
 
 void setup() {
@@ -27,7 +27,7 @@ void draw() {
  noStroke();
  quad(181.09, 265.09, 181.09, 591, 399, 591, 399, 265.09);
 
- // Begin shpes
+ // Begin shapes
   stroke(1);
   // 1
   fill(64, 124, 96);
