@@ -1,11 +1,8 @@
 /**
 *
-* Author: Elohim Guevara Varela
+* Author: Elohim Guevara
 *
 * Assignment 3: Response, "Expressive Eyes"
-*
-* The first version was in p5.js, but this is a Processing 
-* version. To learn more about Processing visit: processing.org
 *
 */
 
