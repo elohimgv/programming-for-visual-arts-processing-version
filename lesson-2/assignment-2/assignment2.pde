@@ -4,9 +4,6 @@
 *
 * Assignment 2: Patterns with Loops
 *
-* The first version was in p5.js, but this is a Processing 
-* version. To learn more about Processing visit: processing.org
-*
 */
 
 // Global vars
