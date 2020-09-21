@@ -1,11 +1,8 @@
 /**
 *
-* Author: Elohim Guevara Varela
+* Author: Elohim Guevara 
 *
 * Assignment 1: Port an Image to Code
-*
-* The first version was in p5.js, but this is a Processing 
-* version. To learn more about Processing visit: processing.org
 *
 * Image:
 *       + "Dream City" by Paul Klee
