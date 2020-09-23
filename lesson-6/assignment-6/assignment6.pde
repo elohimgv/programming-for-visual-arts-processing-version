@@ -4,9 +4,6 @@
 *
 * Assignment 6: Audio Visualizer
 *
-* The first version was in p5.js, but this is a Processing 
-* version. To learn more about Processing visit: processing.org
-*
 */
 
 import ddf.minim.*;
@@ -21,19 +18,21 @@ AudioPlayer sound;
 
 float angle = 0.0;
 // Change the position of the wave in "axis y"
-// if increment the offset value, "axis y" increment and vice versa
+// if increment the offset value, "axis y" 
+// increment and vice versa
 int offset = 300;
 // Amplitud of the wave
-float scalar = 35.0;
+float scalar = 85.0;
 // Speed of the motion
 float speed = 0.05;
-// Size X baLL
+// Size ball (width)
 int sizeXball = 10;
-// Size Y ball
+// Size ball (height)
 int sizeYball = 10;
-// Boolean var to activate increase and decrease the ball
+// Boolean var to activate an increase 
+// and decrease the ball
 boolean state = true;
-// Var move to ball x axis
+// Var to move the ball x axis
 float moveX;
 
 void setup() {
@@ -45,6 +44,7 @@ void setup() {
 void draw() {
   background(255);
 
+  // Point series
   for (int x = 20; x <= width - 20; x += 5) {
     float y = offset + (sin(angle) * scalar);
     point(x, y);
@@ -57,13 +57,14 @@ void draw() {
   float B = map(mouseY, 0, height, 0, 255);
   // ball moves on sine curve
   float y = offset + (sin(angle) * scalar);
-  // Condition to increase the ball if is true
+  // Condition to increase the ball if is false
   if (state == false) {
     fill(234, G, B);
     ellipse(mouseX + 20, y, sizeXball, sizeYball);
   }
-  // Condition to increase the ball if is false
-  // And avoid to disappear the ball when RIGHT_ARROW key is pressed
+  // Condition to increase the ball if is true
+  // and avoid to disappear the ball when  
+  // LEFT_ARROW key is pressed
   if (state == true) {
     fill(234, G, B);
     ellipse(mouseX + 20, y, sizeXball, sizeYball);
@@ -112,3 +113,4 @@ void mousePressed()
     sound.play();
   }
 }
+
