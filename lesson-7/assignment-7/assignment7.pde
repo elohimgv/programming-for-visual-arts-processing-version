@@ -1,6 +1,6 @@
 /**
 *
-* Author: Elohim Guevara Varela
+* Author: Elohim Guevara 
 *
 * Assignment 7: Typography
 *
