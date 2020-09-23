@@ -4,32 +4,29 @@
 *
 * Assignment 7: Typography
 *
-* The first version was in p5.js, but this is a Processing 
-* version. To learn more about Processing visit: processing.org
-*
 */
 
 // Font variable
 PFont font1;
 PFont font2;
-// Variable for change to state to state
+// Var for change to state to state
 int state = 1;
-// Variable for background image
+// Var for background image
 PImage kim;
-// Variable for drawLetter4 function
+// Var for drawLetter4 function
 PImage k1;
-// Variable for drawLetter5 function
+// Var for drawLetter5 function
 int m = 5;
-// Variable for drawLetter6 function
+// Var for drawLetter6 function
 PImage  k2;
 // Arrays for drawLetter7 function
 int[] x = {80, 107, 80, 130, 80, 135};
 int[] y = {94, 274, 180, 115, 180, 274};
-// Variable for drawLetter10 function
+// Var for drawLetter10 function
 PImage k3;
-// Variable for drawLetter11 function
+// Var for drawLetter11 function
 String letterK1;
-// Variable for drawLetter12 function
+// Var for drawLetter12 function
 String letterK2;
 
 void setup() {
@@ -53,10 +50,11 @@ void setup() {
 void draw() {
   // Image background
   image(kim, 0, 0);
-  // Color to image background with alpha value (transparency)
+  // Color for image background with 
+  // alpha value (transparency)
   fill(240, 70, 218, 130);
   rect(0, 0, 300, 400);
-  // Conditions for change to state to state
+  // Change state
   switch (state) {
   case 1:
     drawLetter1();
@@ -97,34 +95,34 @@ void draw() {
   }
 }
 
-void drawLetter1() {
-  // Letter "K" shape 1
+// Letter "K" shape 1
+void drawLetter1() { 
   int counter = 0;
   int space = 5;
   while (counter < 5) {
     counter++;
-    fill(244 + (counter * space), 070 + (counter * space), 017 + (counter * space));
+    fill(244+(counter * space), 070+(counter * space), 017+(counter * space));
     noStroke();
     beginShape();
-    vertex(107.33 + (counter * space), 94.33 + (counter * space));
-    vertex(107.33 + (counter * space), 274.59 + (counter * space));
-    vertex(129.33 + (counter * space), 274.59 + (counter * space));
-    vertex(129.33 + (counter * space), 229 + (counter * space));
-    vertex(141 + (counter * space), 215.67 + (counter * space));
-    vertex(183 + (counter * space), 274.59 + (counter * space));
-    vertex(210.67 + (counter * space), 274.59 + (counter * space));
-    vertex(157.33 + (counter * space), 202.33 + (counter * space));
-    vertex(203.67 + (counter * space), 151.5 + (counter * space));
-    vertex(176.67 + (counter * space), 151.5 + (counter * space));
-    vertex(129.67 + (counter * space), 208.67 + (counter * space));
-    vertex(129.67 + (counter * space), 94.33 + (counter * space));
-    vertex(107.33 + (counter * space), 94.33 + (counter * space));
+    vertex(107.33+(counter*space), 94.33+(counter*space));
+    vertex(107.33+(counter*space), 274.59+(counter*space));
+    vertex(129.33+(counter*space), 274.59+(counter*space));
+    vertex(129.33+(counter*space), 229+(counter*space));
+    vertex(141+(counter*space), 215.67+(counter*space));
+    vertex(183+(counter*space), 274.59+(counter*space));
+    vertex(210.67+(counter*space), 274.59+(counter*space));
+    vertex(157.33+(counter*space), 202.33+(counter*space));
+    vertex(203.67+(counter*space), 151.5+(counter*space));
+    vertex(176.67+(counter*space), 151.5+(counter*space));
+    vertex(129.67+(counter*space), 208.67+(counter*space));
+    vertex(129.67+(counter*space), 94.33+(counter*space));
+    vertex(107.33+(counter*space), 94.33+(counter*space));
     endShape();
   }
 }
 
+// Letter "K" shape 2
 void drawLetter2() {
-  // Letter "K" shape 2
   int repet = 10;
   int n = 2;
   int plus = 10;
@@ -132,48 +130,48 @@ void drawLetter2() {
   strokeWeight(1);
   for (int i = 0; i < repet; i++) {
     // Down K
-    for (int downK  = repet - 1; downK > 0; downK--) {
-      fill(230 + downK * 6);
+    for (int downK  = repet-1; downK > 0; downK--) {
+      fill(230+downK*6);
       beginShape();
-      vertex((107.33 / n) + (downK + plus), (94.33 / n) + (downK + plus));
-      vertex((107.33 / n) + downK, (274.59 / n) + downK);
-      vertex((129.33 / n) + (downK + plus), (274.59 / n) + (downK + plus));
-      vertex((129.33 / n) + downK, (229 / n) + downK);
-      vertex((141 / n) + (downK + plus), (215.67 / n) + (downK + plus));
-      vertex((183 / n) + downK, (274.59 / n) + downK);
-      vertex((210.67 / n) + (downK + plus), (274.59 / n) + (downK + plus));
-      vertex((157.33 / n) + downK, (202.33 / n) + downK);
-      vertex((203.67 / n) + (downK + plus), (151.5 / n) + (downK + plus));
-      vertex((176.67 / n) + downK, (151.5 / n) + downK);
-      vertex((129.67 / n) + (downK + plus), (208.67 / n) + (downK + plus));
-      vertex((129.67 / n) + downK, (94.33 / n) + downK);
-      vertex((107.33 / n) + (downK + plus), (94.33 / n) + (downK + plus));
+      vertex((107.33/n)+(downK+plus), (94.33/n)+(downK + plus));
+      vertex((107.33/n)+downK, (274.59/n)+downK);
+      vertex((129.33/n)+(downK+plus), (274.59/n)+(downK+plus));
+      vertex((129.33/n)+downK, (229/n)+downK);
+      vertex((141/n)+(downK+plus), (215.67/n)+(downK+plus));
+      vertex((183/n)+downK, (274.59/n)+downK);
+      vertex((210.67/n)+(downK+plus), (274.59/n)+(downK+plus));
+      vertex((157.33/n)+downK, (202.33/n)+downK);
+      vertex((203.67/n)+(downK+plus), (151.5/n)+(downK+plus));
+      vertex((176.67/n)+downK, (151.5/n)+downK);
+      vertex((129.67/n)+(downK+plus), (208.67/n)+(downK+plus));
+      vertex((129.67/n)+downK, (94.33/n)+downK);
+      vertex((107.33/n)+(downK+plus), (94.33/n)+(downK+plus));
       endShape();
     }
     // Above K
-    for (int aboveK = 0; aboveK <= i + 1; aboveK++) {
+    for (int aboveK = 0; aboveK <= i+1; aboveK++) {
       fill(244, 070, 017);
       beginShape();
-      vertex((107.33 / n) - (aboveK + plus), (94.33 / n) - (aboveK + plus));
-      vertex((107.33 / n) - aboveK, (274.59 / n) - aboveK);
-      vertex((129.33 / n) - (aboveK + plus), (274.59 / n) - (aboveK + plus));
-      vertex((129.33 / n) - aboveK, (229 / n) - aboveK);
-      vertex((141 / n) - (aboveK + plus), (215.67 / n) - (aboveK + plus));
-      vertex((183 / n) - aboveK, (274.59 / n) - aboveK);
-      vertex((210.67 / n) - (aboveK + plus), (274.59 / n) - (aboveK + plus));
-      vertex((157.33 / n) - aboveK, (202.33 / n)- aboveK);
-      vertex((203.67 / n) - (aboveK + plus), (151.5 / n) - (aboveK + plus));
-      vertex((176.67 / n) - aboveK, (151.5 / n) - aboveK);
-      vertex((129.67 / n) - (aboveK + plus), (208.67 / n) - (aboveK + plus));
-      vertex((129.67 / n) - aboveK, (94.33 / n) - aboveK);
-      vertex((107.33 / n) - (aboveK + plus), (94.33 / n) - (aboveK + plus));
+      vertex((107.33/n)-(aboveK+plus), (94.33/n)-(aboveK+plus));
+      vertex((107.33/n)-aboveK, (274.59/n)-aboveK);
+      vertex((129.33/n)-(aboveK+plus), (274.59/n)-(aboveK + plus));
+      vertex((129.33/n)-aboveK, (229/n)-aboveK);
+      vertex((141/n)-(aboveK+plus), (215.67/n)-(aboveK+plus));
+      vertex((183/n)-aboveK, (274.59/n)-aboveK);
+      vertex((210.67/n)-(aboveK+plus), (274.59/n)-(aboveK+plus));
+      vertex((157.33/n)-aboveK, (202.33/n)-aboveK);
+      vertex((203.67/n)-(aboveK+plus), (151.5/n)-(aboveK+plus));
+      vertex((176.67/n)-aboveK, (151.5/n)-aboveK);
+      vertex((129.67/n)-(aboveK+plus), (208.67/n)-(aboveK+plus));
+      vertex((129.67/n)-aboveK, (94.33/n)-aboveK);
+      vertex((107.33/n)-(aboveK+plus), (94.33/n)-(aboveK + plus));
       endShape();
     }
   }
 }
 
+// Letter "K" shape 3
 void drawLetter3() {
-  // Letter "K" shape 3
   stroke(0);
   strokeWeight(5);
   beginShape();
@@ -208,18 +206,18 @@ void drawLetter3() {
   ellipse(129.67, 94.33, 15, 15);
 }
 
-void drawLetter4() {
-  // letter "K" shape 4
+// Letter "K" shape 4
+void drawLetter4() { 
   float x = random(-5, 5);
   float y = random(-5, 5);
   noTint();
   image(k1, x, y);
 }
 
+// Letter "K" shape 5
 void drawLetter5(int x) {
-  // Letter "K" shape 5
   if (x > 1) {
-    // Create a random numbers between 0 and 1.0
+    // Create random numbers between 0 and 1.0
     float r = random(0, 1.0);
     stroke(0);
     strokeWeight(5);
@@ -237,8 +235,8 @@ void drawLetter5(int x) {
    }
 }
 
+// Letter "K" shape 6
 void drawLetter6() {
-  // letter "K" shape 6
   int offset = 0;
   float easing = 0.05;
   // Display at full opacity
@@ -250,8 +248,8 @@ void drawLetter6() {
   image(k2, offset, 0);
 }
 
+// Letter "K" shape 7
 void drawLetter7() {
-  // Letter "K" shape 7
   // Var to set back
   int back = 100;
   stroke(0);
@@ -288,8 +286,8 @@ void drawLetter7() {
   }
 }
 
+// Letter "K" shape 8
 void drawLetter8() {
-  // Letter "K" shape 8
   int counter1;
   int counter2;
   int counter3;
@@ -297,13 +295,13 @@ void drawLetter8() {
   noStroke();
   // Vertical triangles
   for (counter1 = 0; counter1 < 170; counter1 += 3) {
-    triangle(89, 125 + counter1, 107, 144 + counter1, 126, 125 + counter1);
+    triangle(89, 125+counter1, 107, 144+counter1, 126, 125+counter1);
     // Right top triangles
-    for (counter2 = 62; counter2 > 0; counter2 -= 3) {
-      triangle(169 - counter2, 122 + counter2, 166 - counter2, 148 + counter2, 192 - counter2, 150 + counter2);
+    for (counter2 = 62; counter2 > 0; counter2-=3) {
+      triangle(169-counter2, 122+counter2, 166-counter2, 148+counter2, 192-counter2, 150+counter2);
       // Right bottom triangles
       for (counter3 = 62; counter3 > 0; counter3 -= 3) {
-        triangle(109 + counter3, 234 + counter3, 108 + counter3, 208 + counter3, 134 + counter3, 207 + counter3);
+        triangle(109+counter3, 234+counter3, 108+counter3, 208+counter3, 134+counter3, 207+counter3);
       }
     }
   }
@@ -371,23 +369,23 @@ void drawLetter10(int positionX, int positionY, int sizeX, int sizeY, int repet)
     // It works with module operator
     // Image on the top-center position
     if (i % repet == 1) {
-      image(k3, positionX + i , positionY, sizeX, sizeY);
+      image(k3, positionX+i , positionY, sizeX, sizeY);
     }
     // Image on the left
     else if (i % repet == 3) {
-      image(k3, positionX - i - 70, positionY + i + 50, sizeX, sizeY);
+      image(k3, positionX-i-70, positionY+i+50, sizeX, sizeY);
     }
     // Image on the right
     else if (i % repet == 5) {
-      image(k3, positionX + i + 70, positionY + i + 50, sizeX, sizeY);
+      image(k3, positionX+i+70, positionY+i+50, sizeX, sizeY);
     }
     // Penultimate image
     else if (i % repet == 7) {
-      image(k3, positionX, positionY + i + 100, sizeX, sizeY);
+      image(k3, positionX, positionY+i+100, sizeX, sizeY);
     }
     // Image on the bottom position
     else if (i % repet == 9) {
-      image(k3, positionX, positionY + i + 200, sizeX, sizeY);
+      image(k3, positionX, positionY+i+200, sizeX, sizeY);
     }
   }
 }
@@ -395,17 +393,17 @@ void drawLetter10(int positionX, int positionY, int sizeX, int sizeY, int repet)
 void drawLetter11() {
   fill(226, 61, 35);
   textSize(300);
-  text(letterK1, width / 2, 300);
+  text(letterK1, width/2, 300);
 }
 
 void drawLetter12() {
   fill(237, 34, 93);
   textSize(200);
-  text(letterK2, width / 2, 300);
+  text(letterK2, width/2, 300);
 }
 
 void keyTyped() {
-  // Conditions... if letter q - s is pressed, active the corresponding state
+  // if letter q - s is pressed, active the corresponding state
   if (key == 'q' || key == 'Q') {
     state = 1;
   } else if (key == 'w' || key == 'W') {
