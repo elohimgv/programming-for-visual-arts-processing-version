@@ -8,6 +8,7 @@ class Button {
  boolean over = false;    // True when the mouse is over
  boolean pressed = false; // True when the mouse is over and pressed
  
+ // Constructor
  Button(float xp, float yp, float sw, float sh, color b, color o, color p) {
    pos_x = xp;
    pos_y = yp;
