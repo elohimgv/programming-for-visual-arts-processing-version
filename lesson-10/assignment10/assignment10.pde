@@ -10,12 +10,13 @@
 PFont font;
 Button button;
 Game game;
-// Turn off/on the game
-boolean onOff = false;
-int levelCounter = 0;
-boolean change = false;
+// To start game
+boolean startGame = false;
+// Level game
+int counter = 0;
+boolean youLost = false;
 // To store background color
-color backCol;
+color backColor;
 // To handle game levels
 int[] level = new int[1];
 // Axes values x, y
@@ -37,10 +38,10 @@ void setup() {
 }
 
 void draw() {
-  backCol = color(227, 32, 204);
-  if (onOff) {
-    background(backCol);
-    levelCounter++;
+  backColor = color(227, 32, 204);
+  if (startGame) {
+    background(backColor);
+    counter++;
     fill(0);
     // Level game
     if (game.nextLevel) {
@@ -49,12 +50,12 @@ void draw() {
       // Append to array
       level = (int[]) append(level, game.level);
       game.nextLevel = false;
-      onOff = false;
+      startGame = false;
     }
-    if (game.bottomTouch) {
-      change = true;
-      game.bottomTouch = false;
-      onOff = false;
+    if (game.lost) {
+      youLost = true;
+      game.lost = false;
+      startGame = false;
     } //<>//
     textSize(20);
     text("Level:", width*0.02, height*0.05);
@@ -70,23 +71,22 @@ void draw() {
     }
     game.display(paddlePosX, paddlePosY);
     game.update();
-     
   } else {
-    if (levelCounter <= 0) {
-      startGame(backCol, levelCounter);
+    if (counter <= 0) {
+      starter(backColor, counter);
     } else { 
-      if (change) {
-        backCol = color(0);
-        startGame(backCol, levelCounter);
+      if (youLost) {
+        backColor = color(0);
+        starter(backColor, counter);
       } else {
-        backCol = color(2, 240, 4);
-        startGame(backCol, levelCounter);
+        backColor = color(2, 240, 4);
+        starter(backColor, counter);
       }
     }
   } 
 }
 
-void startGame(color col, int count) { 
+void starter(color col, int count) { 
   background(col);
   button.update();
   button.display();
@@ -102,7 +102,6 @@ void startGame(color col, int count) {
       text("YOU WIN!", width*0.269, height*0.4);
     }
   }
-   
 }
 
 void mousePressed() {
@@ -110,8 +109,8 @@ void mousePressed() {
 }
 
 void mouseReleased() {
-  change = false;
-  onOff = true;
+  youLost = false;
+  startGame = true;
   button.release();
 }
 

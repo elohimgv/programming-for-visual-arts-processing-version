@@ -6,12 +6,12 @@ class Game {
   int ballSize;
   float ballSpeedX;
   float ballSpeedY;
-  boolean collision;
+  boolean collision = false;
   int counter = 0;
-  int level;
-  boolean nextLevel;
+  int level = 1;
+  boolean nextLevel = false;
   int paddleTouch = 0;
-  boolean bottomTouch;
+  boolean lost = false;
   
   // Constructor
   Game(float x, float y, float sx, float sy) {
@@ -22,10 +22,6 @@ class Game {
     ballSize = 20;
     ballSpeedX = sx;
     ballSpeedY = sy;
-    collision = false;
-    level = 1;
-    nextLevel = false;
-    bottomTouch = false;
   }
   
   void display(float paddlePosX, float paddlePosY) {
@@ -45,9 +41,12 @@ class Game {
     // Update ball position
     ballPosX+=ballSpeedX;
     ballPosY+=ballSpeedY;
-    // Collision
-    if ((ballPosX >= paddlePosX) && (ballPosX <= paddlePosX+paddleSizeX) &&
-        (ballPosY >= paddlePosY) && (ballPosY <= paddlePosY+paddleSizeY)) {
+    // Collision between paddle and ball
+    boolean left = ballPosX >= paddlePosX;
+    boolean right = ballPosX <= paddlePosX+paddleSizeX;
+    boolean top = ballPosY >= paddlePosY;
+    boolean bottom = ballPosY <= paddlePosY+paddleSizeY;
+    if ((left && right) && (top && bottom)) {
       ballSpeedX = ballSpeedX * -1;
       ballSpeedY = ballSpeedY * -1;
       collision = true;
@@ -66,16 +65,20 @@ class Game {
         counter = 0;
       }
     }
-    if (ballPosX <= ballSize/2 || ballPosX > width) {
+    // Collision between ball and walls
+    left = ballPosX > width ;
+    right = ballPosX <= ballSize/2;
+    top = ballPosY >= height; 
+    bottom = ballPosY <= ballSize/2;
+    if (left || right) {
       ballSpeedX = ballSpeedX * -1;
     }
-    if (ballPosY <= ballSize/2) {
+    if (top) {
+      ballSpeedY = ballSpeedY * -1;
+      lost = true;
+    }
+    if (bottom) {
       ballSpeedY = ballSpeedY * -1;
     }
-    if (ballPosY >= height) {
-      ballSpeedY = ballSpeedY * -1;
-      bottomTouch = true;
-    }
-    //println(bottomTouch);
   }
 }
