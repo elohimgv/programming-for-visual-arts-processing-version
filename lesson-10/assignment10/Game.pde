@@ -8,7 +8,6 @@ class Game {
   float ballSpeedY;
   boolean collision = false;
   int counter = 0;
-  int level = 1;
   boolean nextLevel = false;
   int paddleTouch = 0;
   boolean lost = false;
@@ -52,7 +51,6 @@ class Game {
       collision = true;
       paddleTouch++;
       if (paddleTouch == 3) {
-        level++;
         paddleTouch = 0;
       } 
       if (paddleTouch == 0) {
