@@ -26,8 +26,10 @@ int add = 1;
 float paddlePosX;
 float paddlePosY;
 
+int ballVelocity;
+
 void setup() {
-  size(1000, 500);
+  size(displayWidth, displayHeight); 
   smooth();
   font = loadFont("JamrulNormal-48.vlw");
   color gray = color(204);
@@ -38,8 +40,8 @@ void setup() {
   level[0] = 1;
   paddlePosX = width*0.425;
   paddlePosY = height*0.7;
-  textSize(100);
-  println(textWidth("GAME OVER"));
+  ballVelocity = 5;
+  textSize(width*0.10);  
 }
 
 void draw() {
@@ -70,13 +72,13 @@ void draw() {
       text(str(level[i]), width*0.08, height*0.05);
     }
     text("Lifes:", width*0.83, height*0.05);
-    for (float i = width*0.91; i < width; i+=30) {
+    for (float i = width*0.91; i < width; i+=(width*0.03)) {
       noStroke();
       if (countGameLost > 0 && countGameLost <= 2 && i == (width*0.91)) { 
         fill(255);
-      } else if (countGameLost > 1 && countGameLost <= 3  && i == (width*0.91)+30) {
+      } else if (countGameLost > 1 && countGameLost <= 3  && i == (width*0.91)+(width*0.03)) {
         fill(250);
-      } else if (countGameLost == 3 && i == (width*0.91)+30*2) { 
+      } else if (countGameLost == 3 && i == (width*0.91)+(width*0.03)*2) { 
           startGame = false; 
           countGameLost = 0; 
           deadToGameOver = true;
@@ -114,11 +116,11 @@ void starter(color col, int count) {
   button.update();
   button.display();
   fill(0);
-  textSize(35);
+  textSize(width * 0.035);
   text("START", width*0.446, height*0.525);
   if (count > 0) { 
     fill(255);
-    textSize(100);
+    textSize(width * 0.10);
     if (col == color(255, 15, 43)) {
       text("YOU LOST!", width*0.269, height*0.4);
     } else if (col == color(42, 220, 43)) {
@@ -144,17 +146,17 @@ void mouseReleased() {
 void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
-      if (paddlePosX == width-game.paddleSizeX) {
+      if (paddlePosX >= width-game.paddleSizeX) {
         paddlePosX = width-game.paddleSizeX;
       } else {
-        paddlePosX+=5;
+        paddlePosX+=ballVelocity;
       }
     } 
     if (keyCode == LEFT) {
-      if (paddlePosX == 0) {
+      if (paddlePosX <= 0) {
         paddlePosX = 0;
       } else {
-        paddlePosX-=5;
+        paddlePosX-=ballVelocity;
       }
     }
   }

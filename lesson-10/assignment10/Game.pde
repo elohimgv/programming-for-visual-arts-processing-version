@@ -3,7 +3,7 @@ class Game {
   float paddleSizeY;
   float ballPosX;
   float ballPosY;
-  int ballSize;
+  float ballSize;
   float ballSpeedX;
   float ballSpeedY;
   boolean collision = false;
@@ -18,7 +18,7 @@ class Game {
     paddleSizeY = height*0.05;
     ballPosX = x; 
     ballPosY = y; 
-    ballSize = 20;
+    ballSize = width*0.02; 
     ballSpeedX = sx;
     ballSpeedY = sy;
   }
